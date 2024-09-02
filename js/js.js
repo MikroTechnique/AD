@@ -71,8 +71,10 @@ document.querySelectorAll('.deptpart').forEach(function (e) {
     e.addEventListener('click', function () {
         document.querySelectorAll('.deptpart').forEach(function (n) {
             n.classList.remove('chselct')
+            n.style.color = "var(--shadcolor)"
         })
         e.classList.add('chselct')
+        e.style.color = "var(--Theme-Color)"
     })
 
 })
