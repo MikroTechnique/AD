@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/book.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">  -->
+    <title>A.D</title>
+</head>
+
+<body>
+    <div class="profilepage">
+        <div class="back-nav">
+            <i class="fa fa fa-chevron-right"></i> 
+        </div>
+        <div class="prof">
+            <div class="cover"></div>
+            <div class="porfimg">
+                <i class="fa fa-graduation-cap cap"></i>
+                <i class="fa fa-graduation-cap cap-color"></i>
+                <img src="2023-08-06 21 46 04.png" alt="">
+            </div>
+            <div class="prof-menu">
+                <i class="fa fa-bell-o"></i>
+                <i class="fa fa-address-book-o"></i> 
+                <i class="fa fa-bookmark-o"></i>
+                <i class="fa fa-Example of rss fa-rss"></i>
+                <i class="fa fa-envelope-o"></i>
+            </div> 
+            <div class="ac-pro-d">
+                <h1 class="name">ali alshawri </h1>
+                <p>بكالوريوس تقنية معلومات </p>
+                <p class="prof-info">      
+                    طالب في جامعة اب او ربما لا
+                    <br>  ابحث في طرق سهلة لتعلم الرياضيات و تطوير البرمجيات المساعدة لذلك اتعاون مع زميلي المتخصص في نسيان الرياضيات لإنشاء بيئة معتدلة خالية من الرياضيات 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="floatthing">
+        <div class="hideall"></div>
+        <div class="share">
+            <div class="maincommentcontent">
+                <h3>مشاركة</h3>
+                <div class="socialshare">
+                    <i class="fa fa-whatsapp" style="color: #0cc243;"></i>
+                    <i class="fa fa-twitter" style="color: #0c92c2;"></i>
+                    <i class="fa fa-facebook-square" style="color: #1865a4;"></i>
+                    <i class="fa fa-link"></i>
+                </div>
+                <div class="shareposts">
+                    <div class="post"></div>
+                </div>
+                <div class="comment">
+                    <h5>او المشاركة على ملفك الشخصي</h5>
+                    <textarea name="" placeholder="نص المنشور" id="sharetext"></textarea>
+                    <button id="sendshare"><i class="fa fa-share"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="comments">
+            <div class="maincommentcontent">
+                <h3>التعليقات</h3>
+                <div class="comment">
+                    <textarea name="commento" id="" placeholder="اترك تعليقا"></textarea>
+                    <button id="sendcomment"><i class="fa fa-send"></i></button>
+                </div>
+                <div class="comments-c"></div>
+            </div>
+        </div>
+        <div class="sidebarphone">
+            <div class="profile">
+                <h4>ali alshawri</h4>
+                <div class="img-profile account-d">
+                    <img src="2023-08-06 21 46 04.png" alt="">
+                </div>
+                <div>
+                    <div id="theme"><i class="fa fa-moon-o"></i></div>
+                </div>
+            </div>
+            <div class="sidelist">
+                <div class="sidebar">
+                    <div class="sidelistitem"><i class="fa fa-search "></i>البحث </div>
+                    <div class="sidelistitem"><i class="fa fa-book "></i>الاقسام </div>
+                    <div class="sidelistitem"><i class="fa fa-flag "></i>التذكيرات </div>
+                    <div class="sidelistitem"><i class="fa fa-cog "></i>الاعدادت </div> 
+                    <div class="sidelistitem"><i class="fa fa-chevron-left "></i>تسجيل الخروج  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="logo">
+            <!-- <img src="flogo.svg" alt="">   -->
+            <svg viewBox="0 0 122.9 122.9">
+                <g id="prefix__g9" transform="translate(.16 11.934)">
+                    <path d="M56.6 69.2V80h10.3V69.2z" id="prefix__path3" />
+                    <g>
+                        <path
+                            d="M109 23c-6-6-14.3-9.8-23.5-9.8H70v66.4h15.5c9.1 0 17.4-3.7 23.5-9.7 6-6 9.7-14.3 9.7-23.5S114.9 29 109 23zM97.1 58c-3 3-7.1 4.8-11.6 4.8h-.6V30.1h.6c4.5 0 8.6 1.8 11.6 4.8s4.8 7 4.8 11.5c0 4.6-1.9 8.7-4.8 11.6z" />
+                    </g>
+                    <path
+                        d="M53.4 13.3V80c-.3 7.4-7.4 13.2-16 13.2-3 0-5.8-.7-8.2-1.9 5.5-1.9 9.3-5.8 9.4-10.8V50.6H26.7V41h11.9V30.1h-.7c-4.5 0-8.6 1.8-11.6 4.8s-4.8 7-4.8 11.5S23.4 55 26.3 58c3 3 7 4.8 11.5 4.8v16.8c-9.1 0-17.4-3.7-23.3-9.7-6-6-9.7-14.3-9.7-23.5S8.4 29 14.4 23s14.3-9.8 23.5-9.8h15.5z" />
+                </g>
+            </svg>
+        </div>
+        <div class="search-bar">
+            <input class="search-input" type="text">
+            <div class="searchresulat"></div>
+            <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="menu">
+            <button id="home" class="btntool selectbtn"><i class="fa fa-home"></i></button>
+            <button id="newpost" class="btntool"><i class="fa fa-pencil-square-o"></i></button>
+            <button id="Notifications" class="btntool"><i class="fa fa-bell-o"></i></button>
+            <button id="liblary" class="btntool"><i class="fa fa-book"></i></button>
+            <button id="bars"><i class="fa fa-bars"></i></button>
+        </div>
+
+        <div class="menu account ">
+            <a class="login" href="login.html">تسجيل الدخول</a>
+            <a class="newlogin" href="signup.html">انشاء حساب </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="subbar">
+            <h2>الأقسام</h2>
+            <div class="sidebar">
+                <div class="deptpart chselct">الحاسوب <i class="fa fa-laptop"></i></div>
+                <div class="deptpart">الرياضيات <i class="fa fa-calculator"></i></div>
+                <div class="deptpart">الكيمياء <i class="fa fa-flask"></i></div>
+                <div class="deptpart">اللغة العربية <i class="fa fa-book"></i></div>
+                <div class="deptpart">اللغة الإنجليزية <i class="fa fa-globe"></i></div>
+                <div class="deptpart">التاريخ <i class="fa fa-history"></i></div>
+                <div class="deptpart">الجغرافيا <i class="fa fa-map"></i></div>
+                <div class="deptpart">الفنون <i class="fa fa-paint-brush"></i></div>
+                <div class="deptpart">العلوم الاجتماعية <i class="fa fa-users"></i></div>
+                <div class="deptpart">التكنولوجيا <i class="fa fa-cogs"></i></div>
+                <div class="deptpart">الموسيقى <i class="fa fa-music"></i></div>
+                <div class="deptpart">البرمجة <i class="fa fa-code"></i></div>
+                <div class="deptpart">التصميم <i class="fa fa-paint-brush"></i></div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="continer">
+            <div class="home maincontenier">
+                <div class="post">
+                    <div class="post-d content">
+                        <div class="user-d">
+                            <div class="account-d">
+                                <div class="user-img"> <img src="2023-08-06 21 46 04.png" alt=""></div>
+                                <div class="username">
+                                    <h4>ali alshawri</h4>
+                                    <h6>bila bila pila </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-menu">X</div>
+                    </div>
+                    <div class="post-p">
+                        <p class="summary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae doloribus vel ut,
+                            in quod? Quaerat, maxime incidunt culpa nihil magni commodi ex optio illum expedita, dolores
+                            eligendi eaque quae!
+                        </p>
+                        <!-- <p class="full-content" style="display: none;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid id dignissimos culpa beatae obcaecati quod a enim commodi consequuntur dicta natus explicabo provident aperiam quaerat libero iure ducimus, dolorem consequatur minus, accusamus minima voluptatibus, quidem nesciunt! Quo tempora doloribus animi excepturi vero officiis sequi, magnam illo corporis! Quos similique beatae exercitationem temporibus perspiciatis repellendus aliquid ex aspernatur quae? Quo dolores incidunt magni, nam minima doloremque reprehenderit, adipisci temporibus facere odio ullam iste similique esse minus consequatur sapiente excepturi rerum sed est, laborum modi. Natus dignissimos est voluptatem hic mollitia, minus provident quis exercitationem, reprehenderit ipsa, libero eveniet et. Recusandae.
+                        </p>
+                        <button class="read-more-btn">قراءة المزيد</button> -->
+
+                    </div>
+                    <div class="post-m">
+                        <i class="fa fa-share"><span class="renum">12</span></i>
+                        <i class="fa fa-comment-o"><span class="renum">4</span></i>
+                        <i class="fa fa-arrow-circle-o-down  likebtndown"><span class="renum">10</span></i>
+                        <i class="fa fa-arrow-circle-o-up  likebtnup"><span class="renum">120</span></i>
+                    </div>
+                    <div class="postcomment">
+                        <div class="comments-container">
+                            <ul id="comments-list" class="comments-list">
+                                <li>
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name "><a href="http://creaticode.com/blog">أوغستين
+                                                        أورتيز</a></h6>
+                                                <span>hace 20 minutos</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-arrow-down  likebtn"><span class="renum">10</span></i>
+                                                <i class="fa fa-arrow-up  likebtn"><span class="renum">120</span></i>
+                                            </div>
+                                            <div class="comment-content">
+                                                من المهم جدًا أن ينتبه العميل إلى عملية إزالة الدهون. هل كل نفس وحق مدح
+                                                الحياة، اختيار الحاضر، ذلك التمييز الحكيم؟
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Respuestas de los comentarios -->
+                                    <ul class="comments-list reply-list">
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                            Rojero</a></h6>
+                                                    <span>hace 10 minutos</span>
+                                                    <i class="fa fa-reply"></i>
+                                                    <i class="fa fa-arrow-down  likebtn"><span
+                                                            class="renum">10</span></i>
+                                                    <i class="fa fa-arrow-up  likebtn"><span
+                                                            class="renum">120</span></i>
+                                                </div>
+                                                <div class="comment-content">
+                                                    من المهم جدًا أن ينتبه العميل إلى عملية إزالة الدهون. هل كل نفس وحق
+                                                    مدح الحياة، اختيار الحاضر، ذلك التمييز الحكيم؟
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="2024-09-01 16 12 38.png" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name "><a
+                                                            href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                                    <span>hace 10 minutos</span>
+                                                    <i class="fa fa-reply"></i>
+                                                    <i class="fa fa-arrow-down  likebtn"><span
+                                                            class="renum">10</span></i>
+                                                    <i class="fa fa-arrow-up  likebtn"><span
+                                                            class="renum">120</span></i>
+                                                </div>
+                                                <div class="comment-content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                    omnis animi et iure laudantium vitae, praesentium optio, sapiente
+                                                    distinctio illo?
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                        Rojero</a></h6>
+                                                <span>hace 10 minutos</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-arrow-down  likebtn"><span class="renum">10</span></i>
+                                                <i class="fa fa-arrow-up  likebtn"><span class="renum">120</span></i>
+                                            </div>
+                                            <div class="comment-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis
+                                                animi et iure laudantium vitae, praesentium optio, sapiente distinctio
+                                                illo?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-d content">
+                        <div class="user-d">
+                            <div class="account-d">
+                                <div class="user-img"> <img src="2023-08-06 21 46 04.png" alt=""></div>
+                                <div class="username">
+                                    <h4>ali alshawri</h4>
+                                    <h6>bila bila pila </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-menu">X</div>
+                    </div>
+                    <div class="post-p">
+                        <p class="summary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae doloribus vel ut,
+                            in quod? Quaerat, maxime incidunt culpa nihil magni commodi ex optio illum expedita, dolores
+                            eligendi eaque quae!
+                        </p>
+                        <p class="full-content" style="display: none;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid id dignissimos culpa
+                            beatae obcaecati quod a enim commodi consequuntur dicta natus explicabo provident aperiam
+                            quaerat libero iure ducimus, dolorem consequatur minus, accusamus minima voluptatibus,
+                            quidem nesciunt! Quo tempora doloribus animi excepturi vero officiis sequi, magnam illo
+                            corporis! Quos similique beatae exercitationem temporibus perspiciatis repellendus aliquid
+                            ex aspernatur quae? Quo dolores incidunt magni, nam minima doloremque reprehenderit,
+                            adipisci temporibus facere odio ullam iste similique esse minus consequatur sapiente
+                            excepturi rerum sed est, laborum modi. Natus dignissimos est voluptatem hic mollitia, minus
+                            provident quis exercitationem, reprehenderit ipsa, libero eveniet et. Recusandae.
+                        </p>
+                        <button class="read-more-btn">قراءة المزيد</button>
+
+                    </div>
+                    <div class="post-m">
+                        <i class="fa fa-share"><span class="renum">12</span></i>
+                        <i class="fa fa-comment-o"><span class="renum">4</span></i>
+                        <i class="fa fa-arrow-circle-o-down  likebtndown"><span class="renum">10</span></i>
+                        <i class="fa fa-arrow-circle-o-up  likebtnup"><span class="renum">120</span></i>
+                    </div>
+                    <div class="postcomment">
+                        <div class="comments-container">
+                            <ul id="comments-list" class="comments-list">
+                                <li>
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name "><a href="http://creaticode.com/blog">أوغستين
+                                                        أورتيز</a></h6>
+                                                <span>hace 20 minutos</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-arrow-down  likebtn"><span class="renum">10</span></i>
+                                                <i class="fa fa-arrow-up  likebtn"><span class="renum">120</span></i>
+                                            </div>
+                                            <div class="comment-content">
+                                                من المهم جدًا أن ينتبه العميل إلى عملية إزالة الدهون. هل كل نفس وحق مدح
+                                                الحياة، اختيار الحاضر، ذلك التمييز الحكيم؟
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Respuestas de los comentarios -->
+                                    <ul class="comments-list reply-list">
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                            Rojero</a></h6>
+                                                    <span>hace 10 minutos</span>
+                                                    <i class="fa fa-reply"></i>
+                                                    <i class="fa fa-arrow-down  likebtn"><span
+                                                            class="renum">10</span></i>
+                                                    <i class="fa fa-arrow-up  likebtn"><span
+                                                            class="renum">120</span></i>
+                                                </div>
+                                                <div class="comment-content">
+                                                    من المهم جدًا أن ينتبه العميل إلى عملية إزالة الدهون. هل كل نفس وحق
+                                                    مدح الحياة، اختيار الحاضر، ذلك التمييز الحكيم؟
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="2024-09-01 16 12 38.png" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name by-author"><a
+                                                            href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                                    <span>hace 10 minutos</span>
+                                                    <i class="fa fa-reply"></i>
+                                                    <i class="fa fa-arrow-down  likebtn"><span
+                                                            class="renum">10</span></i>
+                                                    <i class="fa fa-arrow-up  likebtn"><span
+                                                            class="renum">120</span></i>
+                                                </div>
+                                                <div class="comment-content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                    omnis animi et iure laudantium vitae, praesentium optio, sapiente
+                                                    distinctio illo?
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                        Rojero</a></h6>
+                                                <span>hace 10 minutos</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-arrow-down  likebtn"><span class="renum">10</span></i>
+                                                <i class="fa fa-arrow-up  likebtn"><span class="renum">120</span></i>
+                                            </div>
+                                            <div class="comment-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis
+                                                animi et iure laudantium vitae, praesentium optio, sapiente distinctio
+                                                illo?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-d content">
+                        <div class="user-d">
+                            <div class="account-d">
+                                <div class="user-img"> <img src="2023-08-06 21 46 04.png" alt=""></div>
+                                <div class="username">
+                                    <h4>ali alshawri</h4>
+                                    <h6>bila bila pila </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-menu">X</div>
+                    </div>
+                    <div class="post-p">
+                        <p class="summary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae doloribus vel ut,
+                            in quod? Quaerat, maxime incidunt culpa nihil magni commodi ex optio illum expedita, dolores
+                            eligendi eaque quae!
+                        </p>
+                        <p class="full-content" style="display: none;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid id dignissimos culpa
+                            beatae obcaecati quod a enim commodi consequuntur dicta natus explicabo provident aperiam
+                            quaerat libero iure ducimus, dolorem consequatur minus, accusamus minima voluptatibus,
+                            quidem nesciunt! Quo tempora doloribus animi excepturi vero officiis sequi, magnam illo
+                            corporis! Quos similique beatae exercitationem temporibus perspiciatis repellendus aliquid
+                            ex aspernatur quae? Quo dolores incidunt magni, nam minima doloremque reprehenderit,
+                            adipisci temporibus facere odio ullam iste similique esse minus consequatur sapiente
+                            excepturi rerum sed est, laborum modi. Natus dignissimos est voluptatem hic mollitia, minus
+                            provident quis exercitationem, reprehenderit ipsa, libero eveniet et. Recusandae.
+
+                        </p>
+                        <button class="read-more-btn">قراءة المزيد</button>
+
+                    </div>
+                    <img class="postimg" src="2023-08-06 21 46 04.png" alt="">
+
+                    <div class="post-m">
+                        <i class="fa fa-share"><span class="renum">12</span></i>
+                        <i class="fa fa-comment-o"><span class="renum">4</span></i>
+                        <i class="fa fa-arrow-circle-o-down  likebtndown"><span class="renum">10</span></i>
+                        <i class="fa fa-arrow-circle-o-up  likebtnup"><span class="renum">120</span></i>
+                    </div>
+                    <div class="postcomment">
+                        <div class="comments-container">
+                            <ul id="comments-list" class="comments-list">
+                                <li>
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name "><a href="http://creaticode.com/blog">أوغستين
+                                                        أورتيز</a></h6>
+                                                <span>hace 20 minutos</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-arrow-down  likebtn"><span class="renum">10</span></i>
+                                                <i class="fa fa-arrow-up  likebtn"><span class="renum">120</span></i>
+                                            </div>
+                                            <div class="comment-content">
+                                                من المهم جدًا أن ينتبه العميل إلى عملية إزالة الدهون. هل كل نفس وحق مدح
+                                                الحياة، اختيار الحاضر، ذلك التمييز الحكيم؟
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Respuestas de los comentarios -->
+                                    <ul class="comments-list reply-list">
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                            Rojero</a></h6>
+                                                    <span>hace 10 minutos</span>
+                                                    <i class="fa fa-reply"></i>
+                                                    <i class="fa fa-arrow-down  likebtn"><span
+                                                            class="renum">10</span></i>
+                                                    <i class="fa fa-arrow-up  likebtn"><span
+                                                            class="renum">120</span></i>
+                                                </div>
+                                                <div class="comment-content">
+                                                    من المهم جدًا أن ينتبه العميل إلى عملية إزالة الدهون. هل كل نفس وحق
+                                                    مدح الحياة، اختيار الحاضر، ذلك التمييز الحكيم؟
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <!-- Avatar -->
+                                            <div class="comment-avatar"><img src="2024-09-01 16 12 38.png" alt=""></div>
+                                            <!-- Contenedor del Comentario -->
+                                            <div class="comment-box">
+                                                <div class="comment-head">
+                                                    <h6 class="comment-name "><a
+                                                            href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                                    <span>hace 10 minutos</span>
+                                                    <i class="fa fa-reply"></i>
+                                                    <i class="fa fa-arrow-down  likebtn"><span
+                                                            class="renum">10</span></i>
+                                                    <i class="fa fa-arrow-up  likebtn"><span
+                                                            class="renum">120</span></i>
+                                                </div>
+                                                <div class="comment-content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                    omnis animi et iure laudantium vitae, praesentium optio, sapiente
+                                                    distinctio illo?
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img src="2023-08-06 21 46 04.png" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena
+                                                        Rojero</a></h6>
+                                                <span>hace 10 minutos</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-arrow-down  likebtn"><span class="renum">10</span></i>
+                                                <i class="fa fa-arrow-up  likebtn"><span class="renum">120</span></i>
+                                            </div>
+                                            <div class="comment-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis
+                                                animi et iure laudantium vitae, praesentium optio, sapiente distinctio
+                                                illo?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="Notifications maincontenier">
+                <div class="Su-Main">
+                    <div class="notice error">
+                        <p>يعد هذا إشعارًا بالخطأ، فهو يقدم تعليقات ذات طبيعة سلبية للمستخدم.</p>
+                    </div>
+                    <div class="notice info">
+                        <p>هذا إشعار معلومات، فهو يوفر تعليقات ذات طبيعة محايدة للمستخدم.</p>
+                    </div>
+
+                    <div class="notice success">
+                        <p>يعد هذا إشعارًا بالنجاح، فهو يوفر تعليقات ذات طبيعة إيجابية للمستخدم.</p>
+                    </div>
+                    <div class="notice success">
+                        <p>يعد هذا إشعارًا بالنجاح، فهو يوفر تعليقات ذات طبيعة إيجابية للمستخدم.</p>
+                    </div>
+
+                    <div class="notice warning">
+                        <p>هذا إشعار تحذيري، فهو يقدم تعليقات ذات طبيعة سلبية محتملة للمستخدم.</p>
+                    </div>
+
+                    <div class="notice error">
+                        <p>يعد هذا إشعارًا بالخطأ، فهو يقدم تعليقات ذات طبيعة سلبية للمستخدم.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="newpost maincontenier">
+                <div class="Su-Main">
+                    <div class="postform">
+                        <div class="postcontent">
+                            <textarea placeholder="شاركنا هنا طموحك و افكارك و أستفساراتك" class="posttext" name=""
+                                id=""></textarea>
+                        </div>
+                        <button class="imgAttach AttachBtn"><i class="fa fa-photo"></i></button>
+                        <input type="file" id="imguplod" style="display: none;" accept="image/*">
+                        <button class="codeAttach AttachBtn"><i class="fa fa-code"></i></button>
+                        <button class="ppost">نشر</button>
+                    </div>
+                </div>
+            </div>
+            <div class="liblary maincontenier">
+                <div class="Su-Main">
+                    <div class="books">
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="2024-08-31 10 19 27.png" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="cover-book bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة نسيان الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="cover-book bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img id="bookImage" src="2024-09-01 16 12 38.png" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>نسيان الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> انس ابو لحوم 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="BooksCover/islam.jpg" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="BooksCover/arts.jpg" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="BooksCover/IT.jpg" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="BooksCover/medicine.jpg" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="BooksCover/sport.jpg" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bookcard">
+                            <div class="book" data-book="close">
+                                <div class="book-about">
+                                    <div class="bookpaper1">
+                                        <div class="page">
+                                            هذا الكتاب يتكلم عن طريقة تعلم الرياضيات بين كل رشفة قهوة قبل الافطار
+                                        </div>
+                                    </div>
+                                    <div class="bookpaper2">
+                                        <div class="page">
+                                            اذا وصلت لطريق مسدود في الرياضيات فهذا الكتاب يريك طريقا اخر
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="BooksCover/Policy.jpg" alt="">
+                            </div>
+                            <div class="book-d">
+                                <div class="book-title">
+                                    <h3>تعلم الرياضيات في عشر دقائق </h3>
+                                </div>
+                                <div class="book-auther">
+                                    <h6> علي الشاوري 2024</h6>
+                                </div>
+                                <div class="bookrate">
+                                    <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="writepost">
+            <h2>التذكيرات </h2>
+            <div class="quote-container">
+                <i class="pin"></i>
+                <blockquote class="note yellow">
+                    <h4>قائمة المهام اليومية </h4>
+                    <ol id="stuff">
+                        <li id="0" class="done">شراء سيارة<input type="checkbox" name="done" value="1"
+                                onclick="done(0);"></li>
+                        <li id="1">تسليم مشروع التخرج<input type="checkbox" name="done" value="1" onclick="done(1);">
+                        </li>
+                        <li id="2" class="done">بيع السيارة<input type="checkbox" name="done" value="1"
+                                onclick="done(2);"></li>
+                    </ol>
+                    <div class='butons'>
+                        <cite class="add" onclick="create();">إظافة</cite>
+                        <cite class='clear' onclick="clearUl();">حذف</cite>
+                    </div>
+                </blockquote>
+            </div>
+
+            <div class="quote-container">
+                <i class="pin"></i>
+                <blockquote style="background: #0c92c2;" class="note yellow">
+                    <h4 style="color: #fff ;">قائمة المهام العامة </h4>
+                    <ol id="stuff">
+                        <li id="1"> التخرج<input type="checkbox" name="done" value="1" onclick="done(0);">
+                        </li>
+                    </ol>
+                </blockquote>
+            </div>
+            <!-- <div class="remnder">
+                <div class="quote-container">
+                    <i class="pin"></i>
+                    <blockquote class="note yellow">
+                      <h4>Some stuff</h4>
+                      <ol id="stuff"></ol>
+                      <div class='butons'>
+                      <cite class="add" onclick="create();">Add</cite>
+                      <cite class='clear' onclick="clearUl();">Clear</cite>
+                      </div>
+                    </blockquote>
+                  </div>
+                <div class="remdercard">
+                    <div class="rem-title"><i class="fa fa-thumb-tack"></i> <h3>شراب المعكرونة </h3></div>
+                    <div class="rem-content"></div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+</body>
+<script src="js/js.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+</html>
