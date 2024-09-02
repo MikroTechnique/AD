@@ -241,7 +241,7 @@ display: none;
 }
 
 nav {
-    display: flex;
+    display: fixed ;
     flex-direction: row;
     justify-content: space-between;
     height: 10vh;
